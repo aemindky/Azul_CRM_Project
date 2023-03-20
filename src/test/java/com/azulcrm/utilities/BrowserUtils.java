@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.azulcrm.utilities;
 
 
 import org.junit.Assert;
