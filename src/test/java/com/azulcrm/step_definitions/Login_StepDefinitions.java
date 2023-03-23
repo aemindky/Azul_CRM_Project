@@ -31,8 +31,8 @@ public class Login_StepDefinitions {
         azulCRMLoginPage.inputPassword.sendKeys(string);
     }
 
-    @When("user enters click")
-    public void user_enters_click() {
+    @When("The user clicks on the login button")
+    public void The_user_clicks_on_the_login_button() {
         azulCRMLoginPage.loginBtn.click();
     }
 
@@ -61,15 +61,12 @@ public class Login_StepDefinitions {
         Driver.closeDriver();
     }
 
-   /* @When("user enters any username")
-    public void user_enters_any_username() {
+    @When("user enters any username or password")
+    public void user_enters_any_username_or_password() {
         azulCRMLoginPage.inputUsername.sendKeys("hr1@cybertekschool.com");
     }
 
-    @When("user enters any password")
-    public void user_enters_any_password() {
-        azulCRMLoginPage.inputPassword.sendKeys("");
-    }
+
 
     @Then("user should see please fill out this message")
     public void user_should_see_please_fill_out_this_message() {
@@ -81,7 +78,7 @@ public class Login_StepDefinitions {
         }
         Driver.closeDriver();
 
-    }*/
+    }
 
     @When("user clicks on the Forgot your password link")
     public void user_clicks_on_the_forgot_your_password_link() {
@@ -108,10 +105,10 @@ public class Login_StepDefinitions {
         Driver.closeDriver();
     }
 
-    /*@When("user types password into password input box")
+    @When("user types password into password input box")
     public void user_types_password_into_password_input_box() {
         azulCRMLoginPage.inputPassword.sendKeys("UserUser");
-    }*/
+    }
 
     @Then("user should see password in bullet signs")
     public void user_should_see_password_in_bullet_signs() {
