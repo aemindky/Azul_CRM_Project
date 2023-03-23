@@ -40,7 +40,7 @@ public class Login_StepDefinitions {
     public void user_should_see_the_dashboard() {
         String expected = "Activity Stream";
         Assert.assertEquals(expected, azulCRMHomePage.activityStream.getText());
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
 
@@ -58,7 +58,7 @@ public class Login_StepDefinitions {
     public void user_should_see_incorrect_login_or_password_text() {
         String expected = "Incorrect login or password";
         Assert.assertEquals(expected, azulCRMLoginPage.incorrectLoginOrPasswordText.getText());
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
     @When("user enters any username or password")
@@ -74,9 +74,9 @@ public class Login_StepDefinitions {
         try {
             Assert.assertEquals(expected,azulCRMLoginPage.incorrectLoginOrPasswordText.getText());
         } catch (Exception e) {
-
+            System.out.println("Wrong message");
         }
-        Driver.closeDriver();
+        // Driver.closeDriver();
 
     }
 
@@ -89,7 +89,7 @@ public class Login_StepDefinitions {
     public void user_lands_on_the_get_password_page() {
         String expected = "Get Password";
         Assert.assertEquals(expected, azulCRMGetPasswordPage.getPassword.getText());
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @When("Remember Me link exists on the login page")
@@ -102,7 +102,7 @@ public class Login_StepDefinitions {
     public void remember_me_link_is_clickable() {
         azulCRMLoginPage.rememberMeCheckBox.click();
         Assert.assertTrue(azulCRMLoginPage.rememberMeCheckBox.isSelected());
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @When("user types password into password input box")
@@ -144,7 +144,7 @@ public class Login_StepDefinitions {
     public void user_see_his_her_own_username_in_the_profile_menu() {
         String expected1 = "hr11@cybertekschool.com";
         Assert.assertEquals(expected1, azulCRMHomePage.dashboardUsername.getText());
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
 
