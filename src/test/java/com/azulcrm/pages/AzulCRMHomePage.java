@@ -11,6 +11,9 @@ public class AzulCRMHomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(xpath = "//span[@class='menu-item-link-text'][1]")
+    public  WebElement activityStream;
+
     @FindBy(id = "user-name")
     public WebElement dashboardUsername;
 

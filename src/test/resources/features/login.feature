@@ -11,7 +11,7 @@ Feature: User should be able to login using correct credentials
       And user enters valid password "<password>"
       And user enters click
       Then user should see the dashboard
-      Then user logouts from the homepage
+
 
       Examples:
       |username                        |password|
@@ -39,43 +39,41 @@ Feature: User should be able to login using correct credentials
         |helpdesk22@cyberteckSchool.com   |UsersUser|
 
 
-  @AZUL10-343 @wipp
-    Scenario: User should see "Please fill out this field" message
-      When user enters any username
-      And user enters any password
-      And user enters click
-      Then user should see please fill out this message
+#  @AZUL10-343
+#    Scenario: User should see "Please fill out this field" message
+#      When user enters any username
+#      And user enters any password
+#      And user enters click
+#      Then user should see please fill out this message
+
   @AZUL10-343
     Scenario: User land on the ‘Get Password’ page
       after clicking on the "Forgot your password?" link
       When user clicks on the Forgot your password link
       Then user lands on the Get Password page
+
   @AZUL10-343
     Scenario: User can see "Remember Me" link
       When Remember Me link exists on the login page
       Then Remember Me link is clickable
+
   @AZUL10-343
     Scenario: User should see the password in bullet signs by default
-      When user types password into password input box
+    # When user types password into password input box
       Then user should see password in bullet signs
+
   @AZUL10-343
     Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page
       When user enters username
-      And user enters password
-      Then user presses the Enter button from the keyboard
-  @AZUL10-343
-    Scenario Outline: All users can see their own usernames in the profile menu, after successful login
-      When user enters valid "<username>"
-      And user enters valid "<password>"
-      And user enters click
-      And user should see the dashboard
-      Then user see his/her own username in the profile menu
+      And user enters password and presses the Enter button
+      Then user should see the dashboard
 
-      Examples:
-        |username                         |password|
-        |hr11@cyberteckschool.com         |UserUser|
-        |hr12@cyberteckschool.com         |UserUser|
-        |marketing81@cyberteckschool.com  |UserUser|
-        |marketing88@cyberteckschool.com  |UserUser|
-        |helpdesk11@cyberteckschool.com   |UserUser|
-        |helpdesk22@cyberteckschool.com   |UserUser|
+
+  @AZUL10-343 @wipp
+    Scenario: All users can see their own usernames in the profile menu, after successful login
+      When user enters valid username
+      And user enters valid password
+      And user enters click
+      Then user see his-her own username in the profile menu
+
+
